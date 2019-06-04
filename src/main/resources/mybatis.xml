@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings >
+        <setting name="logImpl" value="LOG4J" />
+    </settings>
+
+    <!--Alias for ParamType and ResuldType in Mapper-->
+    <typeAliases>
+        <package name="com.thompson.pojo"></package>
+    </typeAliases>
+
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager> <!--JDBC , Managed-->
+            <dataSource type="POOLED">  <!--POOLED , UNPOOLED , JNDI-->
+                <property name="driver" value="com.mysql.jdbc.Driver"></property>
+                <property name="url" value="jdbc:mysql://localhost:3306/fascinating"></property>
+                <property name="username" value="root"></property>
+                <property name="password" value="rootroot"></property>
+            </dataSource>
+        </environment>
+        <environment id="oracle">
+            <transactionManager type=""></transactionManager>
+            <dataSource type=""></dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--<mapper resource="com/thompson/fascinating/mapper/UserMapper.xml"></mapper>-->
+        <package name="com.thompson.mapper"></package>
+    </mappers>
+
+
+</configuration>

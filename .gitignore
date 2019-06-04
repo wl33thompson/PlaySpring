@@ -1,0 +1,8 @@
+
+# Directory/Directory pattern to ignore
+.idea
+target
+*.DS_Store
+PlaySpring.iml
+log4j-application.log
+out
